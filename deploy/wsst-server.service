@@ -1,6 +1,6 @@
 [Unit]
 Description=wsst — WebSocket Secure Tunnel (server / exit node)
-Documentation=https://github.com/yourname/wsst
+Documentation=https://github.com/CyberFreedomForever/wsst
 After=network-online.target
 Wants=network-online.target
 
