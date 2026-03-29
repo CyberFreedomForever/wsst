@@ -20,8 +20,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yourname/wsst/internal/mux"
-	"github.com/yourname/wsst/internal/socks"
+	"github.com/CyberFreedomForever/wsst/internal/mux"
+	"github.com/CyberFreedomForever/wsst/internal/socks"
 	"nhooyr.io/websocket"
 	"golang.org/x/net/http2"
 )
