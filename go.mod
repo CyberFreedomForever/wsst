@@ -1,4 +1,4 @@
-module github.com/yourname/wsst
+module github.com/CyberFreedomForever/wsst
 
 go 1.22
 
