@@ -1,0 +1,30 @@
+[Unit]
+Description=wsst — WebSocket Secure Tunnel (gateway / SOCKS5)
+Documentation=https://github.com/yourname/wsst
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nobody
+Group=nogroup
+
+ExecStart=/usr/local/bin/wsst gateway \
+  -server=wss://vps2.example.com/tunnel \
+  -socks=:1080 \
+  -secret=${TUNNEL_SECRET}
+
+EnvironmentFile=-/etc/wsst/gateway.env
+
+Restart=always
+RestartSec=5
+LimitNOFILE=65535
+
+# Hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
